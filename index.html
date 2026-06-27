@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="Logo">
+
+    <img class="IMG1" src="IMG_insonminia.png" alt="Logo Insonminia">
+
+    <h1 class="Titulo">Bem-vindo!</h1>
+</div>
+
+
+<form>
+
+
+    <label for="E-mail" class="label">E-MAIL:</label>
+    <input class="Espaço_email" type="email" id="E-mail" name="E-mail" required>
+
+
+    <label for="Senha" class="label">SENHA:</label>
+    <input class="Espaço_senha" type="password" 
+    maxlength="12"
+    minlength="8"
+    id="Senha" name="Senha" required>
+
+
+
+    
+    <button class="Botão_Login" type="submit"
+    onclick="window.location.href='home.html'">
+    LOGIN
+    </button>
+
+    <button class="Botão_Cadastro" type="button"
+    onclick="window.location.href='cadastro.html'">
+    CADASTRO
+    </button>
+
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>Catálogo Premium</title>
+
+    <link rel="stylesheet"
+    href="styleh.css">
+
+</head>
+
+<body>
+
+<img class="img" src="IMG_insonminia.png">
+
+    <div class="painel">
+
+        <!-- TITULO -->
+        <div class="title-area">
+            <h1>Escolha um modelo</h1>
+            <p>CATÁLOGO GERAL</p>
+        </div>
+
+        <!-- PESQUISA -->
+        <div class="search-box">
+            <input
+            type="text"
+            id="searchInput"
+            placeholder="Pesquisar carro...">
+            <button>🔍</button>
+        </div>
+
+        <!-- FILTROS -->
+        <div class="filters">
+
+            <button data-filter="all">
+                Todos
+            </button>
+
+            <button data-filter="toyota">
+                Toyota
+            </button>
+
+            <button data-filter="ferrari">
+                Ferrari
+            </button>
+
+            <button data-filter="mitsubishi">
+                Mitsubishi
+            </button>
+
+            <button data-filter="bugatti">
+                Bugatti
+            </button>
+
+        </div>
+
+        <!--Os CARDS -->
+        <div class="cards">
+
+            <!-- CARD 1 -->
+            <div class="card" onclick="window.location.href='infosupra.html'"
+            data-brand="toyota">
+
+                <img src="Supra.jpg">
+                <h2>Supra MK4</h2>
+                <p><strong>Marca:</strong> Toyota - <strong>Modelo:</strong> Supra MK4</p>
+                <span>R$ 1.500.000</span>
+
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="card" onclick="window.location.href='infolancer.html'"
+            data-brand="mitsubishi">
+
+                <img src="Lancer.jpg">
+                <h2>Lancer Evo X</h2>
+                <p><strong>Marca:</strong> Mitsubishi - <strong>Modelo:</strong> Lancer Evo X</p>
+                <span>R$ 520.000</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- js -->
+
+    <script>
+
+    /* Filtrar */
+
+    const buttons =
+    document.querySelectorAll(".filters button");
+
+    const cards =
+    document.querySelectorAll(".card");
+
+    buttons.forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            const filter =
+            button.getAttribute("data-filter");
+
+            cards.forEach(card => {
+
+                const brand =
+                card.getAttribute("data-brand");
+
+                if(filter === "all"){
+
+                    card.style.display = "block";
+
+                }
+
+                else if(brand === filter){
+
+                    card.style.display = "block";
+
+                }
+
+                else{
+
+                    card.style.display = "none";
+
+                }
+
+            });
+
+        });
+
+    });
+
+    /* Pesquisar */
+
+    const searchInput =
+    document.getElementById("searchInput");
+
+    searchInput.addEventListener("input", () => {
+
+        const searchText =
+        searchInput.value.toLowerCase();
+
+        cards.forEach(card => {
+
+            const title =
+            card.querySelector("h2")
+            .textContent
+            .toLowerCase();
+
+            const brand =
+            card.getAttribute("data-brand")
+            .toLowerCase();
+
+            if(
+                title.includes(searchText)
+                ||
+                brand.includes(searchText)
+            ){
+
+                card.style.display = "block";
+
+            }
+
+            else{
+
+                card.style.display = "none";
+
+            }
+
+        });
+
+    });
+
+    </script>
+
+</body>
+
+</html>

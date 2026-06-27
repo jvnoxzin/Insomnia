@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+
+    <!-- Link para o arquivo CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="body2">
+
+  <img class="IMG1_cad" src="IMG_insonminia.png" alt="Logo Insonminia">
+
+    <!--CADASTRO-->
+    <div class="cadastro-container">
+      
+
+<!-- Formulário de Cadastro -->
+    <form class="Cadastro" action="home.html" method="post">
+
+<!-- Título -->
+<h1>CADASTRO</h1>
+
+        <!-- Nome -->
+        <label for="Nome Completo" class="label">Nome:</label>
+        <input class="Nome" type="text"
+        maxlength="40"
+        placeholder="Nome Completo"
+        id="Nome Completo" 
+        name="Nome Completo" required>
+
+
+        <!--CPF -->
+        <label for="CPF" class="label">CPF:</label>
+        <input class="CPF" type="text" 
+        inputmode="numeric"
+        maxlength="11"
+        minlength="11"
+        placeholder="000.000.000-00"
+        id="CPF" name="CPF" required>
+
+
+        <!-- E-mail -->
+        <label for="E-mail" class="label">E-mail:</label>
+        <input class="E-mail" type="email" 
+        placeholder="Digite seu E-mail"
+        id="E-mail" name="E-mail" required>
+
+
+        <!--Telefone -->
+        <label for="Telefone" class="label">Telefone:</label>
+        <input class="Telefone" type="tel" 
+        inputmode="numeric"
+        maxlength="11"
+        minlength="10"
+        placeholder="(11) 99999-9999"
+        id="Telefone" name="Telefone" required>
+
+
+        <!-- Senha -->
+        <label for="Senha" class="label">Senha:</label>
+        <input class="Senha" type="password" 
+        maxlength="12"
+        minlength="8"
+        placeholder="Digite uma senha"
+        id="Senha" name="Senha" required>
+
+
+        <!-- Confirmação de Senha -->
+        <label for="ConfirmarSenha" class="label">Confirmar Senha:</label>
+        <input class="ConfirmarSenha" type="password" 
+        maxlength="12"
+        minlength="8"
+        placeholder="Confirme sua senha"
+        id="ConfirmarSenha" name="ConfirmarSenha" required>
+
+
+        <!-- Botão de Cadastro -->
+        <button class="Botão_Cadastro" type="button"
+        onclick="window.location.href='home.html'">
+        Cadastrar-se
+        </button>
+
+
+        <!-- Botão de Voltar -->
+        <button class="Botão_Voltar" type="button" 
+        onclick="window.location.href='index.html'">
+        Voltar para Login
+        </button>
+
+    </form>
+        </div>
+</body>
+
+</html>

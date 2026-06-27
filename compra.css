@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+}
+
+body{
+    background: url("IMG_insonminia2.png") no-repeat center center / cover;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.img{
+    width:min(90vw, 300px);
+    height:auto;
+    max-height:200px;
+    object-fit:contain;
+    position:fixed;
+    left:20px;
+    top:20px;
+    z-index:1;
+}
+
+.container{
+    width:min(100%, 700px);
+    background: #1d1d1d;
+    border-radius: 10px;
+    min-height:min(90vh, 700px);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.box{
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+.descricao{
+    min-height: 130px;
+}
+
+.opcao{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+input[type="radio"]{
+    width: 20px;
+    height: 20px;
+}
+
+button{
+    width: 100%;
+    padding: 15px;
+    font-size: 28px;
+    font-style: italic;
+    background: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 15px 0;
+}
+
+button:hover{
+    background: #e0e0e0;
+}
+
+.garantias{
+    background: white;
+    border: 2px solid #3399ff;
+    padding: 15px 10px 70px 20px;
+}
+
+.garantias ul{
+    margin-top: 5px;
+    padding-left: 20px;
+}
+
+.btn-comprar{
+    background: #000000;
+    color: white;
+    border: none;
+    padding: 40px;
+    font-size: 28px;
+    font-style: italic;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 30px 0;
+}
+
+.btn-comprar:hover{
+    background: #ff0000;
+}
+
+@media(max-width:700px){
+    body{
+        padding:15px;
+    }
+
+    .container{
+        padding:20px 15px;
+    }
+
+    button, .btn-comprar{
+        font-size:22px;
+        padding:18px;
+    }
+}

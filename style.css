@@ -1,0 +1,152 @@
+html, body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('IMG_insonminia2.png') center center / cover no-repeat;
+    color: #f4f4f4;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.body2 {
+    font-family: 'Poppins', sans-serif;
+    background: url('IMG_insonminia2.png') center center / cover no-repeat;
+    color: #f4f4f4;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.IMG1 {
+    width: min(90vw, 600px);
+    height: auto;
+    max-height: 300px;
+    object-fit: contain;
+}
+
+.IMG1_cad {
+    width: min(90vw, 300px);
+    height: auto;
+    max-height: 200px;
+    object-fit: contain;
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    z-index: 1;
+}
+
+.Logo {
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cadastro-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: min(100%, 520px);
+    min-height: 100vh;
+    padding: 20px 0;
+}
+
+.Titulo {
+    text-align: center;
+    margin: 10px 0 0;
+    font-size: clamp(28px, 4vw, 40px);
+}
+
+form {
+    width: min(100%, 460px);
+    display: flex;
+    flex-direction: column;
+}
+
+.Espaço_email, .Espaço_senha, .Nome, .CPF,
+.E-mail, .Telefone, .Senha, .ConfirmarSenha {
+    display: block;
+    border-radius: 20px;
+    font-size: 18px;
+    margin: 5px 0 16px;
+    padding: 12px 24px;
+    width: 100%;
+    min-height: 48px;
+    box-sizing: border-box;
+}
+
+.Botão_Cadastro, .Botão_Login, .Botão_Voltar {
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 24px;
+    margin: 20px auto 0 auto;
+    width: 100%;
+    max-width: 320px;
+    display: block;
+    background-color: #000000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+}
+
+.Botão_Cadastro:hover, .Botão_Login:hover, .Botão_Voltar:hover {
+    transform: translateY(-2px);
+}
+
+.Botão_Cadastro:active, .Botão_Login:active, .Botão_Voltar:active {
+    background: #242424;
+    color: #c5c5c5;
+}
+
+label {
+    text-align: left;
+    padding: 4px 0 0 4px;
+    font-size: 20px;
+}
+
+.Cadastro {
+    background-color: #323232;
+    display: block;
+    padding: 20px;
+    width: 100%;
+    border-radius: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin: 16px auto 0;
+}
+
+input[type="email"]:user-invalid,
+input[type="password"]:user-invalid,
+input[type="tel"]:user-invalid,
+input[type="text"]:user-invalid {
+    background-color: #c98282;
+    border: 3px solid rgb(116, 63, 63);
+}
+
+input[type="email"]:user-valid,
+input[type="password"]:user-valid,
+input[type="tel"]:user-valid,
+input[type="text"]:user-valid {
+    background-color: #a4dba7;
+    border: 3px solid #347750;
+}
